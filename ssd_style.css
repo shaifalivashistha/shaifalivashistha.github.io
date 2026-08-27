@@ -1,167 +1,71 @@
 body {
-    background-color: #f5f5f5;
+    background-color: #f7f9fc;
     color: #333333;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
 }
-
-
-
-
-body>table {
-    background-color: white;
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-}
-
 
 
 
 h1 {
-    color: #333333;
-    font-size: 30px;
-    margin-bottom: 8px;
+    color: #24527a;
 }
 
 
 
+h2 {
+    color: #2f6690;
+}
 
 h3 {
-    color: #555555;
+    color: #3d7ea6;
 }
-
-
-
-
-b[id] {
-    color: #333333;
-    font-size: 18px;
-}
-
 
 
 
 a {
-    color: #2b5d87;
-    text-decoration: none;
+    color: #2f6690;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #1a3f5f;
+    color: #d2691e;
 }
-
-
-
-
-body>table:first-of-type a {
-    font-weight: bold;
-}
-
-
-
-
-p {
-    line-height: 1.6;
-}
-
-
-
-
-li {
-    margin-bottom: 7px;
-}
-
 
 
 
 table[border="1"] {
     border-collapse: collapse;
-    background-color: white;
 }
 
 
 
-
 table[border="1"] th {
-    background-color: #eeeeee;
-    color: #333333;
-    padding: 10px;
+    background-color: #d9edf7;
+    color: #24527a;
+    padding: 8px;
+}
+
+
+
+table[border="1"] td {
+    padding: 7px;
     border: 1px solid #cccccc;
 }
 
 
 
-
-table[border="1"] td {
-    padding: 8px;
-    border: 1px solid #dddddd;
-}
-
-
-
-
 table[border="1"] tr:nth-child(even) td {
-    background-color: #f9f9f9;
+    background-color: #f2f7fb;
 }
-
-
-
-
-table[border="1"] a {
-    color: #2b5d87;
-    font-weight: 500;
-}
-
 
 
 
 hr {
     border: 0;
-    border-top: 1px solid #dddddd;
-    margin: 20px 0;
+    border-top: 1px solid #b8c9d6;
 }
 
 
 
-
-a[href="#home"] {
-    font-size: 13px;
-}
-
-
-
-
-#txt {
-    color: #666666;
-    font-size: 13px;
-}
-
-
-
-
-@media screen and (max-width: 700px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    body>table {
-        width: 95% !important;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    table[border="1"] {
-        font-size: 13px;
-    }
-
-    table[border="1"] th,
-    table[border="1"] td {
-        padding: 6px;
-    }
-
+a[href^="#"] {
+    font-weight: 500;
 }
