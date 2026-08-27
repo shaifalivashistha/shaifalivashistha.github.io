@@ -1,0 +1,628 @@
+/* =========================================================================
+   SHAIFALI VASHISTHA — PERSONAL PORTFOLIO
+   A quiet, paper-and-ink academic page. No frameworks, no JS.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   1. DESIGN TOKENS
+   A small "field notebook" palette: warm-grey paper, ink blue, sage green
+   and a mustard "highlighter" accent. Fraunces carries the personal/
+   academic voice; Work Sans keeps body text easy to read; IBM Plex Mono
+   is used sparingly for labels, dates and tags — a nod to the data/coding
+   side of the page.
+   ---------------------------------------------------------------------- */
+:root {
+  /* colour */
+  --ink: #232323;
+  --ink-soft: #4a4a46;
+  --paper: #EEEBE2;
+  --paper-alt: #E5E1D3;
+  --card-bg: #FBFAF6;
+  --indigo: #2F4858;
+  --sage: #5B7A5E;
+  --ochre: #C08A28;
+  --rule: #C9C2AC;
+
+  /* type */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* layout */
+  --content-width: 780px;
+  --nav-height: 60px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+/* -------------------------------------------------------------------------
+   2. RESET & BASE
+   ---------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--indigo);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* -------------------------------------------------------------------------
+   3. LAYOUT HELPERS
+   ---------------------------------------------------------------------- */
+.section-inner,
+.nav-inner,
+.hero-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+.section-alt {
+  background-color: var(--paper-alt);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--indigo);
+  opacity: 0.55;
+  margin-bottom: 8px;
+}
+
+.rule {
+  border: none;
+  border-top: 1px dashed var(--rule);
+  margin: 18px 0 28px 0;
+}
+
+.section-note {
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+
+.section-note code {
+  font-family: var(--font-mono);
+  background: var(--card-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+}
+
+/* -------------------------------------------------------------------------
+   4. NAVIGATION
+   Simple sticky bar. The checkbox + label pattern gives a working mobile
+   menu without any JavaScript.
+   ---------------------------------------------------------------------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav-inner {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--ink-soft);
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--indigo);
+}
+
+.nav-toggle,
+.nav-toggle-label {
+  display: none;
+}
+
+/* -------------------------------------------------------------------------
+   5. HERO
+   ---------------------------------------------------------------------- */
+.hero {
+  padding: 64px 0 56px 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-name {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 6px;
+}
+
+.hero-role {
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.hero-tags {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--sage);
+  letter-spacing: 0.01em;
+}
+
+/* -------------------------------------------------------------------------
+   6. PHOTO FRAME + "TAPE" ACCENT
+   The signature visual motif: a small strip of tape holding photos in
+   place, echoing the sketching / journaling / photography hobbies.
+   Reused on the hero portrait and every gallery image.
+   ---------------------------------------------------------------------- */
+.photo-frame {
+  position: relative;
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-2deg);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule);
+  background-color: var(--card-bg);
+}
+
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 54px;
+  height: 20px;
+  background-color: var(--ochre);
+  opacity: 0.55;
+  transform: translateX(-50%) rotate(-3deg);
+  border-radius: 1px;
+  z-index: 2;
+}
+
+/* -------------------------------------------------------------------------
+   7. CONTENT BLOCKS (About)
+   ---------------------------------------------------------------------- */
+h2 {
+  font-size: 1.7rem;
+}
+
+.content-block p {
+  margin-bottom: 16px;
+  max-width: 62ch;
+}
+
+.question-list {
+  margin: 4px 0 16px 0;
+  border-left: 2px solid var(--sage);
+  padding-left: 18px;
+}
+
+.question-list li {
+  margin-bottom: 6px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.trait-line {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--indigo);
+  margin-top: 20px;
+}
+
+/* -------------------------------------------------------------------------
+   8. ENTRY LIST (Education / Experience / Projects)
+   Catalog-card style entries with a quiet left rule and a right-aligned
+   mono date, similar to an academic CV.
+   ---------------------------------------------------------------------- */
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.entry {
+  border-left: 2px solid var(--indigo);
+  padding-left: 20px;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.entry h3 {
+  font-size: 1.15rem;
+}
+
+.entry-date {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.entry-org {
+  font-size: 14.5px;
+  color: var(--sage);
+  margin: 3px 0 10px 0;
+}
+
+.entry p {
+  margin-bottom: 8px;
+  max-width: 64ch;
+}
+
+.entry-bullets li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  color: var(--ink-soft);
+  font-size: 15.5px;
+}
+
+.entry-bullets li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: var(--sage);
+}
+
+/* -------------------------------------------------------------------------
+   9. CARD GRID (Interests / Hobbies)
+   ---------------------------------------------------------------------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-md);
+  padding: 22px 24px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+/* -------------------------------------------------------------------------
+   10. SKILLS / TAG LISTS
+   ---------------------------------------------------------------------- */
+.skills-block {
+  margin-top: 44px;
+}
+
+.skills-heading {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.skills-group {
+  margin-bottom: 16px;
+}
+
+.skills-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  border: 1px solid var(--indigo);
+  color: var(--indigo);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* tag lists used inside project entries sit closer to the text above them */
+.entry .tag-list {
+  margin-top: 10px;
+}
+
+/* -------------------------------------------------------------------------
+   11. GALLERY
+   ---------------------------------------------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule);
+  background-color: var(--card-bg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(35, 35, 35, 0.15);
+}
+
+.gallery-item .tape {
+  top: -8px;
+  width: 40px;
+  height: 16px;
+}
+
+/* -------------------------------------------------------------------------
+   12. ACHIEVEMENTS
+   ---------------------------------------------------------------------- */
+.achievement-list {
+  columns: 2;
+  column-gap: 40px;
+}
+
+.achievement-list li {
+  break-inside: avoid;
+  margin-bottom: 14px;
+  font-size: 15.5px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.achievement-list li::before {
+  content: "\2013";
+  position: absolute;
+  left: 0;
+  color: var(--ochre);
+}
+
+.ach-mark {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--indigo);
+}
+
+/* -------------------------------------------------------------------------
+   13. A LITTLE MORE ABOUT ME
+   ---------------------------------------------------------------------- */
+.statement-list li {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+
+/* -------------------------------------------------------------------------
+   14. CONTACT
+   ---------------------------------------------------------------------- */
+.contact-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.contact-list a {
+  text-decoration: none;
+  font-size: 15.5px;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  width: 80px;
+  flex-shrink: 0;
+}
+
+/* -------------------------------------------------------------------------
+   15. FOOTER
+   ---------------------------------------------------------------------- */
+.site-footer {
+  text-align: center;
+  padding: 32px 24px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--rule);
+}
+
+/* -------------------------------------------------------------------------
+   16. RESPONSIVE — TABLET (≤ 900px)
+   ---------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------------------------------------------------------------------------
+   17. RESPONSIVE — MOBILE (≤ 600px)
+   ---------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  /* collapsible nav menu, driven by the hidden checkbox */
+  .nav-toggle-label {
+    display: block;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background-color: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 24px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .hero-tags {
+    font-size: 12px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .achievement-list {
+    columns: 1;
+  }
+
+  .entry-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .contact-list li {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

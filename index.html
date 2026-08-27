@@ -1,2 +1,488 @@
-Welcome to my web page. I am Shaifali Vashistha. My website is still under construction. But, you can go through my <a
-    href="/cv.pdf">cv</a> for now.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaifali Vashistha</title>
+    <meta name="description"
+        content="Personal portfolio of Shaifali Vashistha — Product Design & Management, Data Science, Technology and Creativity.">
+
+    <!-- Google Fonts: Fraunces (display serif), Work Sans (body), IBM Plex Mono (labels/tags) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">S. Vashistha</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu">&#9776;</label>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============ HERO / HEADER ============ -->
+    <header class="hero" id="hero">
+        <div class="hero-inner">
+
+            <!-- Profile photo placeholder. Replace images/profile.jpg with your own photo. -->
+            <div class="photo-frame">
+                <span class="tape" aria-hidden="true"></span>
+                <img src="images/profile.jpg" alt="Portrait of Shaifali Vashistha">
+            </div>
+
+            <div class="hero-text">
+                <p class="eyebrow">Personal&nbsp;Page</p>
+                <h1 class="hero-name">Shaifali Vashistha</h1>
+                <p class="hero-role">Product Design &amp; Management &nbsp;|&nbsp; Data Science &nbsp;|&nbsp; Technology
+                    &amp; Creativity</p>
+                <p class="hero-tags">#ProductDesign &nbsp;#DataScience &nbsp;#Coding &nbsp;#ProblemSolving &nbsp;#AI
+                    &nbsp;#Creativity</p>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============ ABOUT ============ -->
+        <section id="about" class="section">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;01</p>
+                <h2>About Me</h2>
+                <hr class="rule">
+
+                <div class="content-block">
+                    <p>I am currently pursuing an M.Tech in Product Design &amp; Management at IIIT Hyderabad. Before
+                        this, I completed my B.S. in Data Science &amp; Applications from IIT Madras.</p>
+
+                    <p>My academic background is primarily in data, technology, programming, machine learning, software
+                        development, data analysis, and business analytics. I enjoy coding and solving problems — but
+                        over time, I became interested not only in how a technical solution is built, but also in
+                        questions like:</p>
+
+                    <ul class="question-list">
+                        <li>Who are we building for?</li>
+                        <li>What problem are we actually solving?</li>
+                        <li>What makes a product useful?</li>
+                        <li>How can technology and design work together?</li>
+                    </ul>
+
+                    <p>This curiosity is what led me toward Product Design &amp; Management. I'm currently exploring the
+                        intersection of technology, data, product design, and people.</p>
+
+                    <p class="trait-line">Curious &middot; Analytical &middot; Creative &middot; Interested in
+                        technology &amp; product design &middot; Enjoys problem solving &middot; Enjoys learning and
+                        experimenting</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EDUCATION ============ -->
+        <section id="education" class="section section-alt">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;02</p>
+                <h2>Education</h2>
+                <hr class="rule">
+
+                <div class="entry-list">
+                    <article class="entry">
+                        <div class="entry-head">
+                            <h3>M.Tech in Product Design &amp; Management</h3>
+                            <span class="entry-date">2026 &ndash; Present</span>
+                        </div>
+                        <p class="entry-org">IIIT Hyderabad</p>
+                    </article>
+
+                    <article class="entry">
+                        <div class="entry-head">
+                            <h3>B.S. in Data Science &amp; Applications</h3>
+                            <span class="entry-date">2020 &ndash; 2024</span>
+                        </div>
+                        <p class="entry-org">IIT Madras &middot; GPA: 8.04 / 10</p>
+                    </article>
+
+                    <article class="entry">
+                        <div class="entry-head">
+                            <h3>Schooling</h3>
+                            <span class="entry-date">CBSE, Delhi</span>
+                        </div>
+                        <p class="entry-org">Intermediate: 80.4% &middot; Matriculation: 10/10 CPI</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ INTERESTS ============ -->
+        <section id="interests" class="section">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;03</p>
+                <h2>Interests</h2>
+                <hr class="rule">
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Coding &amp; Technology</h3>
+                        <p>I enjoy coding because it lets me turn ideas into tangible things. I like experimenting,
+                            debugging, and building applications.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Product Design</h3>
+                        <p>I'm interested in understanding users, identifying problems, and designing products that are
+                            genuinely useful.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Data &amp; AI</h3>
+                        <p>My academic background introduced me to machine learning, AI, data analysis, and predictive
+                            modelling.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Problem Solving</h3>
+                        <p>I enjoy solving programming problems, data problems, product problems, puzzles, and Sudoku.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Visual Thinking</h3>
+                        <p>Sketching, photography, and art give me a creative and visual way of thinking.</p>
+                    </article>
+                </div>
+
+                <!-- Technical skills, grouped here since they support the interests above -->
+                <div class="skills-block">
+                    <h3 class="skills-heading">Toolkit</h3>
+
+                    <div class="skills-group">
+                        <p class="skills-label">Languages</p>
+                        <ul class="tag-list">
+                            <li>Python</li>
+                            <li>C/C++</li>
+                            <li>Java</li>
+                            <li>SQL</li>
+                            <li>Vue.js</li>
+                            <li>MATLAB</li>
+                            <li>Bash</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-group">
+                        <p class="skills-label">Technologies &amp; Tools</p>
+                        <ul class="tag-list">
+                            <li>Flask</li>
+                            <li>PyTorch</li>
+                            <li>NumPy</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                            <li>PostgreSQL</li>
+                            <li>SQLite</li>
+                            <li>Redis</li>
+                            <li>GitHub</li>
+                            <li>Figma</li>
+                            <li>Excel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ EXPERIENCE ============ -->
+        <section id="experience" class="section section-alt">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;04</p>
+                <h2>Experience</h2>
+                <hr class="rule">
+
+                <div class="entry-list">
+                    <article class="entry">
+                        <div class="entry-head">
+                            <h3>Teaching Assistant &mdash; Modern Application Development</h3>
+                            <span class="entry-date">Spring 2023</span>
+                        </div>
+                        <p class="entry-org">IIT Madras</p>
+                        <ul class="entry-bullets">
+                            <li>Worked with a batch of 40 students.</li>
+                            <li>Conducted programming sessions.</li>
+                            <li>Organized doubt-solving sessions.</li>
+                            <li>Addressed course-related queries.</li>
+                            <li>Prepared mock tests and solutions.</li>
+                        </ul>
+                    </article>
+
+                    <article class="entry">
+                        <div class="entry-head">
+                            <h3>Mentor &mdash; Modern Application Development</h3>
+                            <span class="entry-date">Fall 2022</span>
+                        </div>
+                        <p class="entry-org">IIT Madras</p>
+                        <ul class="entry-bullets">
+                            <li>Mentored a batch of 21 students.</li>
+                            <li>Conducted doubt-clearing sessions.</li>
+                            <li>Helped manage weekly assignments.</li>
+                        </ul>
+                    </article>
+
+                    <article class="entry">
+                        <div class="entry-head">
+                            <h3>Group Leader &mdash; Bandipur Group</h3>
+                            <span class="entry-date">Fall 2022</span>
+                        </div>
+                        <p class="entry-org">IIT Madras</p>
+                        <ul class="entry-bullets">
+                            <li>Organized introductory and discussion sessions.</li>
+                            <li>Served as a point of contact for operational and programme-related queries.</li>
+                            <li>Worked with approximately 60 students.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PROJECTS ============ -->
+        <section id="projects" class="section">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;05</p>
+                <h2>Projects</h2>
+                <hr class="rule">
+
+                <div class="entry-list">
+                    <article class="entry">
+                        <h3>Mentorship Platform</h3>
+                        <p class="entry-org">A mentorship platform designed for IIT Madras BS students.</p>
+                        <p>Worked on understanding user requirements through user interviews, building wireframes and UI
+                            design, and developing the platform with Flask and REST APIs following an agile approach.
+                        </p>
+                        <ul class="tag-list">
+                            <li>Flask</li>
+                            <li>REST APIs</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>Jinja2</li>
+                            <li>Figma</li>
+                            <li>Jira</li>
+                        </ul>
+                    </article>
+
+                    <article class="entry">
+                        <h3>Kanban To-Do Application</h3>
+                        <p class="entry-org">A task-management web application.</p>
+                        <p>Built features for task management, deadline tracking, reminder emails, and monthly
+                            statistical reports.</p>
+                        <ul class="tag-list">
+                            <li>Flask</li>
+                            <li>SQLite</li>
+                            <li>Vue.js</li>
+                            <li>Celery</li>
+                            <li>Redis</li>
+                        </ul>
+                    </article>
+
+                    <article class="entry">
+                        <h3>Strategic Decision Making &amp; Reinforcement Learning</h3>
+                        <p>Explored Multi-Armed Bandits, &epsilon;-greedy, UCB, Q-Learning, and SARSA. Designed a
+                            reward-driven environment where an agent interacts with its surroundings and learns to make
+                            decisions.</p>
+                    </article>
+
+                    <article class="entry">
+                        <h3>Data &amp; Business Analysis</h3>
+                        <p>Worked on projects involving financial analysis, e-commerce trends, sales data, and inventory
+                            data — using data visualization to surface business insights.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HOBBIES ============ -->
+        <section id="hobbies" class="section section-alt">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;06</p>
+                <h2>Hobbies</h2>
+                <hr class="rule">
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Puzzle Solving &amp; Sudoku</h3>
+                        <p>I like problems that need patience and logical thinking, so I go back to puzzles and Sudoku
+                            often — for the same reason I enjoy debugging.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Art &amp; Sketching</h3>
+                        <p>Sketching gives me a creative break from analytical and technical work. It's a different way
+                            of thinking with my hands.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Reading</h3>
+                        <p>I like reading across subjects — it's one of the simplest ways to keep learning something
+                            new.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Gardening</h3>
+                        <p>Gardening has taught me to appreciate patience and gradual progress. Not everything grows on
+                            your schedule.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Photography</h3>
+                        <p>Photography makes me pay attention to details and perspectives I'd otherwise walk past.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Journaling</h3>
+                        <p>Journaling gives me a space to record thoughts, ideas, experiences, and reflections as they
+                            happen.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ GALLERY ============ -->
+        <section id="gallery" class="section">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;07</p>
+                <h2>Picture Gallery</h2>
+                <hr class="rule">
+                <p class="section-note">A few sketches and photographs — replace the placeholder files in the
+                    <code>images/</code> folder with your own.</p>
+
+                <div class="gallery-grid">
+
+                    <!-- Replace images/sketch1.jpg with one of your sketches -->
+                    <figure class="gallery-item">
+                        <span class="tape" aria-hidden="true"></span>
+                        <img src="images/sketch1.jpg" alt="Sketch by Shaifali Vashistha">
+                    </figure>
+
+                    <!-- Replace images/photo1.jpg with one of your photographs -->
+                    <figure class="gallery-item">
+                        <span class="tape" aria-hidden="true"></span>
+                        <img src="images/photo1.jpg" alt="Photograph by Shaifali Vashistha">
+                    </figure>
+
+                    <!-- Replace images/garden1.jpg with a photo from your garden -->
+                    <figure class="gallery-item">
+                        <span class="tape" aria-hidden="true"></span>
+                        <img src="images/garden1.jpg" alt="A photo from the garden">
+                    </figure>
+
+                    <!-- Replace images/photo2.jpg with another photograph -->
+                    <figure class="gallery-item">
+                        <span class="tape" aria-hidden="true"></span>
+                        <img src="images/photo2.jpg" alt="Photograph by Shaifali Vashistha">
+                    </figure>
+
+                    <!-- Replace images/sketch2.jpg with another sketch -->
+                    <figure class="gallery-item">
+                        <span class="tape" aria-hidden="true"></span>
+                        <img src="images/sketch2.jpg" alt="Sketch by Shaifali Vashistha">
+                    </figure>
+
+                    <!-- Replace images/campus1.jpg with a photo from campus -->
+                    <figure class="gallery-item">
+                        <span class="tape" aria-hidden="true"></span>
+                        <img src="images/campus1.jpg" alt="A photo from campus">
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ ACHIEVEMENTS ============ -->
+        <section id="achievements" class="section section-alt">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;08</p>
+                <h2>Achievements</h2>
+                <hr class="rule">
+
+                <ul class="achievement-list">
+                    <li><span class="ach-mark">AIR 4687</span> &mdash; GATE DA 2025</li>
+                    <li><span class="ach-mark">98.22 percentile</span> &mdash; MAT, September 2025</li>
+                    <li><span class="ach-mark">93.98 percentile</span> in LRDI &mdash; CAT 2025</li>
+                    <li><span class="ach-mark">219</span> &mdash; NMAT 2025</li>
+                    <li><span class="ach-mark">88.97 percentile</span> &mdash; SNAP 2025</li>
+                    <li>B.S. in Data Science &amp; Applications, IIT Madras</li>
+                    <li>Foundation Level Course in Programming &amp; Data Science, IIT Madras</li>
+                    <li>Participated in the IBM Zurich &amp; Shooting Stars Foundation Datathon</li>
+                    <li>Participated in Capture the Flag at Shaastra, IIT Madras</li>
+                    <li>Participated in Reverse Coding at Shaastra, IIT Madras</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ A LITTLE MORE ABOUT ME ============ -->
+        <section id="more-about-me" class="section">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;09</p>
+                <h2>A Little More About Me</h2>
+                <hr class="rule">
+
+                <ul class="statement-list">
+                    <li>I enjoy things that make me think.</li>
+                    <li>I like making things.</li>
+                    <li>I enjoy watching things grow.</li>
+                    <li>I notice little things.</li>
+                    <li>I like documenting things.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ CONTACT ============ -->
+        <section id="contact" class="section section-alt">
+            <div class="section-inner">
+                <p class="eyebrow">N&deg;10</p>
+                <h2>Contact</h2>
+                <hr class="rule">
+
+                <!-- Replace the placeholders below with your real contact details -->
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:REPLACE_WITH_EMAIL">[ADD YOUR EMAIL]</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">GitHub</span>
+                        <a href="#">[ADD GITHUB LINK]</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="#">[ADD LINKEDIN LINK]</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <p>Shaifali Vashistha &middot; Built with HTML &amp; CSS</p>
+    </footer>
+
+</body>
+
+</html>
